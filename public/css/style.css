@@ -1,0 +1,30 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.cta {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background: #0ea5e9;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 250ms ease;
+  z-index: 3;
+}
+
+.cta.active {
+  transform: translateY(-10px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.cta:is(:hover, :focus-visible) {
+  background: #1e3a8a;
+}
